@@ -26,6 +26,9 @@ fi
 echo "正在重新加载 systemd 配置..."
 sudo systemctl daemon-reload
 
+# 关闭监听服务
+pkill -f inotifywait
+
 # 输出完成信息
 echo "卸载完成！"
 
